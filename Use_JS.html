@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Using JS</title>
+    </head>
+    <body bgcolor="lightblue">
+        <fieldset>
+            <legend>Percel receiver details</legend>
+            <ol>
+                <li>
+                    <label for="name">Name<em>*</em></label>
+                    <input id="name"/>
+                </li>
+                <br>
+                <li>
+                    <lebel for="address1">Addres<em>*</em></lebel>
+                    <input id="addres1">
+                </li>
+                <br>
+                <li>
+                    <label for="contact">Phone<em>*</em></label>
+                    <input id="phone"/>
+                </li>
+                <br>
+                <li>
+                    <label for="mail">Email<em>*</em></label>
+                    <input id="mail"/>
+                </li>
+                <br>
+            </ol>
+            <form action="">
+                Delivary type: 
+                <select name="type">
+                    <option value="Asap">As soon as possible</option>
+                    <option value="fast">Very fast</option>
+                    <option value="u">Usual</option>
+                    <option value="lt">Late</option>
+                </select>
+            </form>
+            <form>
+                Payment option: <input type="checkbox" name="cash">Cash on
+                <input type="checkbox" name="mob">Mobile Banking
+                <input type="checkbox" name="card">Visa Card
+            </form>
+            <input type="button" onClick="confirmation()" value="Submit & Confirm">
+        </fieldset>
+        <script type="text/javascript">
+            //var msg="HijingBijing by Tofsir"
+            //document.write(msg)
+            var d= new Date()
+            var time= d.getHours()
+            if(time<=10 && time>5)
+            document.write("<h4>Good Morning</h4>")
+            else if(time>10 && time<15)
+            document.write("<h4>Good Noon</h4>")
+            else if(time>=15 && time<20)
+            document.write("<h4>Good Evening</h4>")
+            else
+            document.write("<h4>Good Night</h4>")
+            function disp_alert()
+            {
+                alert("Your details has been received. Thank you for your co-operation")
+            }
+            function confirmation()
+            {
+                var validate=confirm("Are you sure you want to confirm your order?")
+                if(validate)
+            document.write("Your order has been received. Thanks for your information");
+        else
+        document.write("Your order has been cenceled. Stay with us. Welcome");
+            }
+            
+
+        </script>
+    </body>
+</html>
